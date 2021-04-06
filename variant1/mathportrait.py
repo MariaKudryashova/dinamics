@@ -2,11 +2,13 @@ import numpy as np
 import json
 import time
 
-def get_epsilon(max_eps):
+
+
+def get_epsilon(min_eps, max_eps, speed_eps):
     eps = []
-    j = 1
+    j = min_eps
     for i in range(500):
-        j = round(j * 1.01, 2)
+        j = round(j * speed_eps, 2)
         eps.append(j)
         if j > max_eps:
             break
@@ -52,11 +54,12 @@ def corr_integral(epsilon, v):
     C = 1 / (M * (M - 1)) * summ
     return C
 
-def estimates(eps, v):
+def estimates(m, eps, v, delimeter):
     array_r = []
     for j, ep in enumerate(eps):
         ci = corr_integral(ep, v)
-        array_r.append(ci)
+        msg = f"{m}{delimeter}{ep}{delimeter}{ci}"
+        array_r.append(msg)
         
     return array_r
 

@@ -1,0 +1,10 @@
+500000
+1
+5
+1
+0.01
+1.0
+1.1
+5
+set_kantor500.txt
+res_kantor500.txt

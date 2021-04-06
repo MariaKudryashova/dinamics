@@ -257,6 +257,7 @@ void get_vector(double *a, int n, int num_vi, int m, int p, double **arr, size_t
 
 double avg(double *a, int n) 
 {
+	printf("!!!!!!!!!!!!!!!!!! = %d\n", n);
 	clock_t start = clock();
 	
 	//n - количество точек временного ряда

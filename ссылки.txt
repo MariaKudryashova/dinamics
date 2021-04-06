@@ -1,0 +1,12 @@
+https://www.sciencedirect.com/science/article/pii/S2590123020300128
+https://m.habr.com/ru/post/208368/
+
+file:///C:/Users/maru/Desktop/Bozhokin_S_V_,_Parshin_D_A_Fraktalue_i_multifraBookSee_org.pdf
+file:///C:/Users/maru/dinprojects/articles/fractal.pdf
+file:///C:/Users/maru/dinprojects/articles/Fractals.PDF
+
+
+gcc gen_kantor.c -o gen_kantor
+
+gcc estimate.c functions.c -o est
+

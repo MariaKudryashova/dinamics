@@ -1,6 +1,7 @@
 variant1/__pycache__/
 variant1/env/
 variant1/estimates/
+env/
 
 *.json
 data.csv

@@ -1,85 +1,57 @@
 # dinamics
-Расчет фрактальной размерности аттрактора
+Calculation of the fractal dimension of the attractor
 
-### Содержание проекта
+### Content
 
-### Вариант 1. Полностью в python
+### V1. Python
 
 cd dinprojects/dinamics/variant1/
 
-requirements.txt - библиотеки для настройки окружения
-config.py - параметры и настройки расчетов
-mathportrait.py - функции
-data.csv - исследуемый ряд чисел
+requirements.txt 
+config.py 
+mathportrait.py
+data.csv
 
-Запуск:
+Start:
 env\Scripts\activate
 python estimates.py
 
-результаты:
+Results:
 dict_result.json
 
+### V2. With external library on C
+mingw
 
-
-### Вариант 2. С помощью внешней библиотеки на C
-
-!Внимание: параметры зашиты внутри С-библиотеки, надо будет переделать
-
-Компиляция библиотеки
-следует проверить наличие mingw и возможно что-то еще будет просить доустановить
-
-запускаем виртуальное окружение из dinamics
+1. Start dinamics env
 env\Scripts\activate
 
-заходим в variant2 и билдим внешнюю библиотеку
+3. Cd variant2
 python setup.py build
+result: \build\lib.win-amd64-3.8 library pyd
 
-в \build\lib.win-amd64-3.8 будет наш файл библиотечки с расширением pyd
-
-работаем с расчетами
+4. Start calculations
 python api_estimates.py
 
-
-### Вариант 3. Просто на C.
-
-Расчет по скалярному временному ряду
-компилируем
+### V3. Simple C
+Compile
 gcc estimate.c functions.c -o est
-
-запускаем
+Start calculations
 est
 
+### V4. Simple C
+Calculation a correlation integral and correlation dimention of input data 
+(as a vectors of a given dimention m)
 
-### Вариант 4. Просто на C.
+est_types.c - in progress now
 
-Расчет корреляционного интеграла и (в будущем) корреляционной размерности
-входящих данных в виде векторов заданной размерности m
+### Commands
 
-est_types.c - есть вопросы по типизации, отложено
-
-
-
-
-
-
-
-
-
-
-
-
-
-Шпаргралка команд
-
-Создать окружение и активировать его
 python -m venv env
 env\Scripts\activate
 env\Scripts\deactivate
 
-сделать список библиотек
 pip freeze > requirements.txt
 
-установить библиотеки
 pip install -r requirements.txt
 
 
